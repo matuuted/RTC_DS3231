@@ -39,7 +39,7 @@ DS3231_Status DS3231_ReadTime(DS3231_Time *time)
     if (!time) return DS3231_INVALID_PARAM;
 
     DS3231_Status status = DS3231_OK;
-    uint8_t buf[DS3231_MAX_BLOCK_READ];
+    uint8_t buf[3];
 
     status = DS3231_parse_hal_status(DS3231_register_block_read(DS3231_REG_SECONDS, buf,  sizeof(buf)));
     if (status != DS3231_OK) return status;
