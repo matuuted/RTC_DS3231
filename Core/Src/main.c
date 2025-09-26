@@ -67,19 +67,19 @@ static void DS3231_Test(void)
         Error_Handler();
     }
 
-    // // Configuro la fecha y hora inicial -> 2025-09-25 (jueves=4) 16:05:30
+    // Configuro la fecha y hora inicial -> 2025-09-25 (jueves=4) 16:05:30
     st = DS3231_SetTime(25, 9, 25, 4, 16, 5, 30);
 
-    // // Apago y enciendo la salida de 32Khz
-    // st = DS3231_Enable32KHz(false);
+    // Apago y enciendo la salida de 32Khz
+    st = DS3231_Enable32KHz(false);
 
-    // st = DS3231_Enable32KHz(true);
+    st = DS3231_Enable32KHz(true);
 
     // Configurar SQW en 1 Hz 
     st = DS3231_SetSQWFreq(DS3231_SQW_1HZ);
 
-    // // Reconfiguro SQW en 4KHz
-    // st = DS3231_SetSQWFreq(DS3231_SQW_4096HZ);
+    // Reconfiguro SQW en 4KHz
+    st = DS3231_SetSQWFreq(DS3231_SQW_4096HZ);
 
 
     // Test de lectura del aging.
