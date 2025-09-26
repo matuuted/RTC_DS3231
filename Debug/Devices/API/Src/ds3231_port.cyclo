@@ -1,0 +1,5 @@
+../Devices/API/Src/ds3231_port.c:12:19:DS3231_is_ready	1
+../Devices/API/Src/ds3231_port.c:17:19:DS3231_register_write	1
+../Devices/API/Src/ds3231_port.c:24:19:DS3231_register_block_write	3
+../Devices/API/Src/ds3231_port.c:31:19:DS3231_register_read	2
+../Devices/API/Src/ds3231_port.c:37:19:DS3231_register_block_read	3

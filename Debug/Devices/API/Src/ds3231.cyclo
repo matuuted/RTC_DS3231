@@ -1,0 +1,17 @@
+../Devices/API/Inc/ds3231.h:58:23:dec2bcd	1
+../Devices/API/Inc/ds3231.h:61:23:bcd2dec	1
+../Devices/API/Src/ds3231.c:12:22:DS3231_parse_hal_status	5
+../Devices/API/Src/ds3231.c:28:15:DS3231_Init	1
+../Devices/API/Src/ds3231.c:37:15:DS3231_ReadTime	3
+../Devices/API/Src/ds3231.c:58:22:DS3231_SetTimeBCD	2
+../Devices/API/Src/ds3231.c:78:15:DS3231_SetTime	11
+../Devices/API/Src/ds3231.c:106:15:DS3231_GetTemperature	3
+../Devices/API/Src/ds3231.c:130:15:DS3231_GetStatus	3
+../Devices/API/Src/ds3231.c:139:15:DS3231_ClearStatus	3
+../Devices/API/Src/ds3231.c:160:15:DS3231_GetControl	3
+../Devices/API/Src/ds3231.c:174:15:DS3231_UpdateControl	3
+../Devices/API/Src/ds3231.c:193:15:DS3231_ClearControl	3
+../Devices/API/Src/ds3231.c:212:15:DS3231_Enable32KHz	8
+../Devices/API/Src/ds3231.c:248:15:DS3231_SetSQWFreq	4
+../Devices/API/Src/ds3231.c:278:15:DS3231_SetAging	2
+../Devices/API/Src/ds3231.c:283:15:DS3231_GetAging	3

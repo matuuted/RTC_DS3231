@@ -1,0 +1,6 @@
+../Drivers/API/Src/dev_i2cm.c:30:19:I2CM_I2C1_Init	2
+../Drivers/API/Src/dev_i2cm.c:48:19:I2CM_I2C1_DeInit	2
+../Drivers/API/Src/dev_i2cm.c:57:19:I2CM_Write	4
+../Drivers/API/Src/dev_i2cm.c:75:19:I2CM_Read	4
+../Drivers/API/Src/dev_i2cm.c:93:19:I2CM_Read_Sr	4
+../Drivers/API/Src/dev_i2cm.c:112:19:I2CM_IsDeviceReady	4

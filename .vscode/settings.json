@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "api_delay.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "main.h": "c",
+        "ds3231_port.h": "c",
+        "ds3231.h": "c",
+        "dev_i2cm.h": "c",
+        "ds3231_registers.h": "c"
+    },
+    "cortex-debug.gdbPath": "${env:GDB}"
+}

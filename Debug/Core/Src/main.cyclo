@@ -1,0 +1,4 @@
+../Core/Src/main.c:60:13:DS3231_Test	2
+../Core/Src/main.c:114:5:main	2
+../Core/Src/main.c:156:6:SystemClock_Config	3
+../Core/Src/main.c:207:6:Error_Handler	1
