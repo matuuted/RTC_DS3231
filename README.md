@@ -63,4 +63,4 @@ Este dispositivo permite llevar un registro preciso de fecha y hora, incluso dur
 
 La documentación del driver que se encuentra en este proyecto, la cual fué generada con **Doxygen**, se encuentra disponible en el siguiente enlace:
 
-- [Ver documentación](docs/html/index.html)
+- [Ver documentación](https://matuuted.github.io/RTC_DS3231/)
