@@ -1,0 +1,278 @@
+\doxysection{Referencia del archivo Devices/\+API/\+Src/ds3231.c}
+\hypertarget{ds3231_8c}{}\label{ds3231_8c}\index{Devices/API/Src/ds3231.c@{Devices/API/Src/ds3231.c}}
+
+
+Implementación del driver DS3231, utilizando \doxylink{ds3231__port_8c}{ds3231\+\_\+port.\+c}.  
+
+
+{\ttfamily \#include "{}ds3231.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a1faa1f4d7a1be389faf658871da42f39}{DS3231\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Verifica la presencia del DS3231 en el bus de I2C. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a13a4ba9b594d36f0e92ace12336426b6}{DS3231\+\_\+\+Read\+Time}} (\mbox{\hyperlink{struct_d_s3231___time}{DS3231\+\_\+\+Time}} \texorpdfstring{$\ast$}{*}time)
+\begin{DoxyCompactList}\small\item\em Lee la hora actual desde el DS3231. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_af422c0f37f5763d688ae3b815002ffda}{DS3231\+\_\+\+Set\+Time}} (uint8\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t date, uint8\+\_\+t day, uint8\+\_\+t hour, uint8\+\_\+t min, uint8\+\_\+t sec)
+\begin{DoxyCompactList}\small\item\em Configura la fecha y hora del RTC. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a2fde7712837ca76da546d6518febe624}{DS3231\+\_\+\+Get\+Temperature}} (float \texorpdfstring{$\ast$}{*}temp)
+\begin{DoxyCompactList}\small\item\em Obtiene la temperatura interna del DS3231. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a49d6f1b60277ac981d0f7a8962b28186}{DS3231\+\_\+\+Get\+Status}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}status)
+\begin{DoxyCompactList}\small\item\em Lee el registro STATUS. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_aeae49861491fb0fa7439641e49518d59}{DS3231\+\_\+\+Clear\+Status}} (uint8\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Limpia los bits del registro STATUS que se envian como parametro en la mascara. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a6b97135a2ceed1923b956dd4ebc453e6}{DS3231\+\_\+\+Get\+Control}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}control)
+\begin{DoxyCompactList}\small\item\em Lee el registro de Control (0x0E). \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a2d9932291c96e8d79f9d55c7e3c5d9b5}{DS3231\+\_\+\+Update\+Control}} (uint8\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Configura los bits indicados por la máscara. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a7bea9c583a7834830eaa5da87f0604c1}{DS3231\+\_\+\+Clear\+Control}} (uint8\+\_\+t mask)
+\begin{DoxyCompactList}\small\item\em Limpia los bits indicados por la máscara. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a22188bdf2872d7403199e5036f3b6bf5}{DS3231\+\_\+\+Enable32\+KHz}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Habilita o deshabilita la salida de 32 k\+Hz. \texorpdfstring{$\ast$}{*}. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a0563050b11e247f047c573dc92a13e4b}{DS3231\+\_\+\+Set\+SQWFreq}} (uint8\+\_\+t rs\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em Habilita y configura la frecuencia de la señal cuadrada (SQW). \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_a01be7186b5d89e62e688c6c1e9d0ea73}{DS3231\+\_\+\+Set\+Aging}} (int8\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Configura el valor de envejecimiento. \end{DoxyCompactList}\item 
+DS3231\+\_\+\+Status \mbox{\hyperlink{ds3231_8c_ac3e0b935a72ea5ea6e85611022fb25b1}{DS3231\+\_\+\+Get\+Aging}} (int8\+\_\+t \texorpdfstring{$\ast$}{*}offset)
+\begin{DoxyCompactList}\small\item\em Obtiene el valor actual del registro de envejecimiento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación del driver DS3231, utilizando \doxylink{ds3231__port_8c}{ds3231\+\_\+port.\+c}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{ds3231_8c_doc-func-members}
+\doxysubsection{Documentación de funciones}
+\Hypertarget{ds3231_8c_a7bea9c583a7834830eaa5da87f0604c1}\index{ds3231.c@{ds3231.c}!DS3231\_ClearControl@{DS3231\_ClearControl}}
+\index{DS3231\_ClearControl@{DS3231\_ClearControl}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_ClearControl()}{DS3231\_ClearControl()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a7bea9c583a7834830eaa5da87f0604c1} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Clear\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mask}{}\end{DoxyParamCaption})}
+
+
+
+Limpia los bits indicados por la máscara. 
+
+Limpia los bits en el registro CONTROL.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mask} & Contiene los bits a limpiar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ds3231_8c_aeae49861491fb0fa7439641e49518d59}\index{ds3231.c@{ds3231.c}!DS3231\_ClearStatus@{DS3231\_ClearStatus}}
+\index{DS3231\_ClearStatus@{DS3231\_ClearStatus}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_ClearStatus()}{DS3231\_ClearStatus()}}
+{\footnotesize\ttfamily \label{ds3231_8c_aeae49861491fb0fa7439641e49518d59} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Clear\+Status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mask}{}\end{DoxyParamCaption})}
+
+
+
+Limpia los bits del registro STATUS que se envian como parametro en la mascara. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mask} & Máscara con los bits a limpiar (por ejemplo\+: DS3231\+\_\+\+STATUS\+\_\+\+OSF). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si funciono correctamente. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_a22188bdf2872d7403199e5036f3b6bf5}\index{ds3231.c@{ds3231.c}!DS3231\_Enable32KHz@{DS3231\_Enable32KHz}}
+\index{DS3231\_Enable32KHz@{DS3231\_Enable32KHz}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_Enable32KHz()}{DS3231\_Enable32KHz()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a22188bdf2872d7403199e5036f3b6bf5} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Enable32\+KHz (\begin{DoxyParamCaption}\item[{bool}]{enable}{}\end{DoxyParamCaption})}
+
+
+
+Habilita o deshabilita la salida de 32 k\+Hz. \texorpdfstring{$\ast$}{*}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em enable} & true para habilitar, false para deshabilitar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si funciono correctamente. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_ac3e0b935a72ea5ea6e85611022fb25b1}\index{ds3231.c@{ds3231.c}!DS3231\_GetAging@{DS3231\_GetAging}}
+\index{DS3231\_GetAging@{DS3231\_GetAging}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_GetAging()}{DS3231\_GetAging()}}
+{\footnotesize\ttfamily \label{ds3231_8c_ac3e0b935a72ea5ea6e85611022fb25b1} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Get\+Aging (\begin{DoxyParamCaption}\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene el valor actual del registro de envejecimiento. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em offset} & Puntero a variable donde se almacenará el valor leído. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si la lectura fue exitosa. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_a6b97135a2ceed1923b956dd4ebc453e6}\index{ds3231.c@{ds3231.c}!DS3231\_GetControl@{DS3231\_GetControl}}
+\index{DS3231\_GetControl@{DS3231\_GetControl}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_GetControl()}{DS3231\_GetControl()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a6b97135a2ceed1923b956dd4ebc453e6} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Get\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{control}{}\end{DoxyParamCaption})}
+
+
+
+Lee el registro de Control (0x0E). 
+
+Lee el registro CONTROL. \Hypertarget{ds3231_8c_a49d6f1b60277ac981d0f7a8962b28186}\index{ds3231.c@{ds3231.c}!DS3231\_GetStatus@{DS3231\_GetStatus}}
+\index{DS3231\_GetStatus@{DS3231\_GetStatus}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_GetStatus()}{DS3231\_GetStatus()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a49d6f1b60277ac981d0f7a8962b28186} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Get\+Status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{status}{}\end{DoxyParamCaption})}
+
+
+
+Lee el registro STATUS. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em status} & Puntero al valor leído. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si funciono correctamente. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_a2fde7712837ca76da546d6518febe624}\index{ds3231.c@{ds3231.c}!DS3231\_GetTemperature@{DS3231\_GetTemperature}}
+\index{DS3231\_GetTemperature@{DS3231\_GetTemperature}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_GetTemperature()}{DS3231\_GetTemperature()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a2fde7712837ca76da546d6518febe624} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Get\+Temperature (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{temp}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene la temperatura interna del DS3231. 
+
+\DoxyHorRuler{0}
+ \hypertarget{ds3231_8c_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Funcion de lectura de la temperatura}{Funcion de lectura de la temperatura}}\label{ds3231_8c_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Conversion de valores a grados celsius. El MSB contiene la parte entera con signo. Los 2 bits altos del LSB contienen la fracción en pasos de 0.\+25°C.
+\end{DoxyItemize}\Hypertarget{ds3231_8c_a1faa1f4d7a1be389faf658871da42f39}\index{ds3231.c@{ds3231.c}!DS3231\_Init@{DS3231\_Init}}
+\index{DS3231\_Init@{DS3231\_Init}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_Init()}{DS3231\_Init()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a1faa1f4d7a1be389faf658871da42f39} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica la presencia del DS3231 en el bus de I2C. 
+
+\DoxyHorRuler{0}
+ \hypertarget{ds3231_8c_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{Funciones de inicializacion, solo verifica la presencia del device en el Bus de I²C.}{Funciones de inicializacion, solo verifica la presencia del device en el Bus de I²C.}}\label{ds3231_8c_autotoc_md0}
+\Hypertarget{ds3231_8c_a13a4ba9b594d36f0e92ace12336426b6}\index{ds3231.c@{ds3231.c}!DS3231\_ReadTime@{DS3231\_ReadTime}}
+\index{DS3231\_ReadTime@{DS3231\_ReadTime}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_ReadTime()}{DS3231\_ReadTime()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a13a4ba9b594d36f0e92ace12336426b6} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Read\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_s3231___time}{DS3231\+\_\+\+Time}} \texorpdfstring{$\ast$}{*}}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Lee la hora actual desde el DS3231. 
+
+\DoxyHorRuler{0}
+ \hypertarget{ds3231_8c_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Funciones de lectura y escritura de tiempo}{Funciones de lectura y escritura de tiempo}}\label{ds3231_8c_autotoc_md1}
+\Hypertarget{ds3231_8c_a01be7186b5d89e62e688c6c1e9d0ea73}\index{ds3231.c@{ds3231.c}!DS3231\_SetAging@{DS3231\_SetAging}}
+\index{DS3231\_SetAging@{DS3231\_SetAging}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_SetAging()}{DS3231\_SetAging()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a01be7186b5d89e62e688c6c1e9d0ea73} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Set\+Aging (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Configura el valor de envejecimiento. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em offset} & Valor con signo (-\/128 a +127)\+:
+\begin{DoxyItemize}
+\item Positivo\+: incrementa la frecuencia.
+\item Negativo\+: reduce la frecuencia. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si funciono correctamente. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_a0563050b11e247f047c573dc92a13e4b}\index{ds3231.c@{ds3231.c}!DS3231\_SetSQWFreq@{DS3231\_SetSQWFreq}}
+\index{DS3231\_SetSQWFreq@{DS3231\_SetSQWFreq}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_SetSQWFreq()}{DS3231\_SetSQWFreq()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a0563050b11e247f047c573dc92a13e4b} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Set\+SQWFreq (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rs\+\_\+bits}{}\end{DoxyParamCaption})}
+
+
+
+Habilita y configura la frecuencia de la señal cuadrada (SQW). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em rs\+\_\+bits} & Máscara con los bits RS1 y RS2 que definen la frecuencia\+:
+\begin{DoxyItemize}
+\item 00\+: 1Hz
+\item 01\+: 1.\+024k\+Hz
+\item 10\+: 4.\+096k\+Hz
+\item 11\+: 8.\+192k\+Hz 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si la configuración fue exitosa. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_af422c0f37f5763d688ae3b815002ffda}\index{ds3231.c@{ds3231.c}!DS3231\_SetTime@{DS3231\_SetTime}}
+\index{DS3231\_SetTime@{DS3231\_SetTime}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_SetTime()}{DS3231\_SetTime()}}
+{\footnotesize\ttfamily \label{ds3231_8c_af422c0f37f5763d688ae3b815002ffda} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{year}{, }\item[{uint8\+\_\+t}]{month}{, }\item[{uint8\+\_\+t}]{date}{, }\item[{uint8\+\_\+t}]{day}{, }\item[{uint8\+\_\+t}]{hour}{, }\item[{uint8\+\_\+t}]{min}{, }\item[{uint8\+\_\+t}]{sec}{}\end{DoxyParamCaption})}
+
+
+
+Configura la fecha y hora del RTC. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em yy} & Año (00-\/99) \\
+\hline
+{\em mm} & Mes (1-\/12) \\
+\hline
+{\em dd} & Día del mes (1-\/31) \\
+\hline
+{\em dow} & Día de semana (1-\/7) \\
+\hline
+{\em hh} & Hora (0-\/23) \\
+\hline
+{\em mi} & Minutos (0-\/59) \\
+\hline
+{\em ss} & Segundos (0-\/59) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+DS3231\+\_\+\+OK si funciono correctamente. 
+\end{DoxyReturn}
+\Hypertarget{ds3231_8c_a2d9932291c96e8d79f9d55c7e3c5d9b5}\index{ds3231.c@{ds3231.c}!DS3231\_UpdateControl@{DS3231\_UpdateControl}}
+\index{DS3231\_UpdateControl@{DS3231\_UpdateControl}!ds3231.c@{ds3231.c}}
+\doxysubsubsection{\texorpdfstring{DS3231\_UpdateControl()}{DS3231\_UpdateControl()}}
+{\footnotesize\ttfamily \label{ds3231_8c_a2d9932291c96e8d79f9d55c7e3c5d9b5} 
+DS3231\+\_\+\+Status DS3231\+\_\+\+Update\+Control (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mask}{}\end{DoxyParamCaption})}
+
+
+
+Configura los bits indicados por la máscara. 
+
+Actualiza los bits del registro CONTROL.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mask} & Mascara con los bits a configurar (ej\+: DS3231\+\_\+\+CTRL\+\_\+\+INTCN \texorpdfstring{$\vert$}{|} DS3231\+\_\+\+CTRL\+\_\+\+A1\+IE) \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RTC_3231: Archivo de código fuente Devices/API/Inc/ds3231_registers.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RTC_3231<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Driver I2C para RTC 3231 (Real-Time Clock)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dir_036ba507fe550560010f008cfcb3a881.html">Devices</a></li><li class="navelem"><a href="../../dir_23a8101c60ecbb74df3f07ff5b4d8090.html">API</a></li><li class="navelem"><a href="../../dir_e208b9c755a6f02acb3241583d487db1.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">ds3231_registers.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d06/ds3231__registers_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef DS3231_REGISTERS_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define DS3231_REGISTERS_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/* Tamaños definidos para buffers. */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define DS3231_MAX_BLOCK_WRITE   (8)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define DS3231_MAX_BLOCK_READ    (7)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define DS3231_ALARM1_BUF_SIZE   (4)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define DS3231_ALARM2_BUF_SIZE   (3)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define DS3231_TEMP_BUF_SIZE     (2)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/* Direcciones de Registros del DS3231                                        */</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gab752aeeb9f43f088ef3ea1e92cf0dd55">   33</a></span><span class="preprocessor">#define DS3231_REG_SECONDS       (0x00)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga0beecd98fb52521b3df1fb020e10bde1">   34</a></span><span class="preprocessor">#define DS3231_REG_MINUTES       (0x01)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gac54475e0a15745f77a8275a4ddd71574">   35</a></span><span class="preprocessor">#define DS3231_REG_HOURS         (0x02)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga893212dc1791ad4b6d57351fed0df3bf">   36</a></span><span class="preprocessor">#define DS3231_REG_DAY           (0x03)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga30d9731093cd092c212bc763183e5819">   37</a></span><span class="preprocessor">#define DS3231_REG_DATE          (0x04)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaaa4a129d3a1b54e2ab4e77f43a6f4985">   38</a></span><span class="preprocessor">#define DS3231_REG_MONTH         (0x05)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga109bb0d6f731ff9453434eb80ded18b3">   39</a></span><span class="preprocessor">#define DS3231_REG_YEAR          (0x06)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gabd5973ef29f3ed421269321e6826b8ea">   40</a></span><span class="preprocessor">#define DS3231_REG_ALARM_1       (0x07)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga8b94a8907a685e2e45d3e47ce074f920">   41</a></span><span class="preprocessor">#define DS3231_REG_ALARM_2       (0x0B)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga14b27d8bc32c34f1eaecf569355c84d3">   42</a></span><span class="preprocessor">#define DS3231_REG_CONTROL       (0x0E)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaeee46891f279544efa92a99e15e8d023">   43</a></span><span class="preprocessor">#define DS3231_REG_STATUS        (0x0F)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga90dd14910a8b8464f78fc73e90cc12d4">   44</a></span><span class="preprocessor">#define DS3231_REG_AGING         (0x10)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaa03c8831a5b1e11abc00e730c23ecc55">   45</a></span><span class="preprocessor">#define DS3231_REG_TEMP_MSB      (0x11)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga35ddcaf5258fc941f90f8428c2032fa1">   46</a></span><span class="preprocessor">#define DS3231_REG_TEMP_LSB      (0x12)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/* Bit Map del Registro de Control (0x0E)                                     */</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gacfc1677178811d53cd457c4880c54ccc">   51</a></span><span class="preprocessor">#define DS3231_CTRL_EOSC         (1 &lt;&lt; 7)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gae1cc580bf1a5bfb3986e4d779ac6b038">   52</a></span><span class="preprocessor">#define DS3231_CTRL_BBSQW        (1 &lt;&lt; 6)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga85eb927c3762783eed85ceebb1c043ab">   53</a></span><span class="preprocessor">#define DS3231_CTRL_CONV         (1 &lt;&lt; 5)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gad6d9343d99d0781547085e4738550a9b">   54</a></span><span class="preprocessor">#define DS3231_CTRL_RS2          (1 &lt;&lt; 4)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga73c83c329cb1cb19a4d3041f5c96efb7">   55</a></span><span class="preprocessor">#define DS3231_CTRL_RS1          (1 &lt;&lt; 3)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga52c8ae1dab4ea9e3228283fbd7067429">   56</a></span><span class="preprocessor">#define DS3231_CTRL_INTCN        (1 &lt;&lt; 2)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaf410370b8fe4ae2230aff4f9677c80ef">   57</a></span><span class="preprocessor">#define DS3231_CTRL_A2IE         (1 &lt;&lt; 1)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gacba36e31094c1ca15def397a8b3fa6c7">   58</a></span><span class="preprocessor">#define DS3231_CTRL_A1IE         (1 &lt;&lt; 0)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">/* Frecuencia de la señal cuadrada */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga3206ae1245ccba978a0dac4a4208638b">   61</a></span><span class="preprocessor">#define DS3231_SQW_1HZ           (0)                                         </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaf0228eee07bbbc860c9f3f06c7d9cdcb">   62</a></span><span class="preprocessor">#define DS3231_SQW_1024HZ        (DS3231_CTRL_RS1)                           </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga00cabcd354f810db79ecf60834dc8c2c">   63</a></span><span class="preprocessor">#define DS3231_SQW_4096HZ        (DS3231_CTRL_RS2)                           </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga4a82df50f6641d9d68c1c40ad5b470ab">   64</a></span><span class="preprocessor">#define DS3231_SQW_8192HZ        (DS3231_CTRL_RS2 | DS3231_CTRL_RS1)         </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">/* Bit Map del Registro de Estado (0x0F)                                      */</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/* -------------------------------------------------------------------------- */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gaec9ab3a653255f7463dbe72a6804504f">   69</a></span><span class="preprocessor">#define DS3231_STATUS_OSF        (1 &lt;&lt; 7)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga2e08dacadcd17f7907512049e349ae81">   70</a></span><span class="preprocessor">#define DS3231_STATUS_EN32KHZ    (1 &lt;&lt; 3)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga7868258193d87aba193666874b4f13c9">   71</a></span><span class="preprocessor">#define DS3231_STATUS_BSY        (1 &lt;&lt; 2)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#ga14a09d4f8831969934c2d8b6009fc92d">   72</a></span><span class="preprocessor">#define DS3231_STATUS_A2F        (1 &lt;&lt; 1)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="../../dd/dd7/group___d_s3231__registers.html#gabde8d1288680a6e75fe124e09a45d2c9">   73</a></span><span class="preprocessor">#define DS3231_STATUS_A1F        (1 &lt;&lt; 0)  </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> <span class="comment">// end of group DS3231_Registers</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">/* DS3231_REGISTERS_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

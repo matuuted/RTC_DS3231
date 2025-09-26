@@ -1,0 +1,74 @@
+\doxysection{ds3231\+\_\+registers.\+h}
+\hypertarget{ds3231__registers_8h_source}{}\label{ds3231__registers_8h_source}\index{Devices/API/Inc/ds3231\_registers.h@{Devices/API/Inc/ds3231\_registers.h}}
+\mbox{\hyperlink{ds3231__registers_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ DS3231\_REGISTERS\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DS3231\_REGISTERS\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ Tamaños\ definidos\ para\ buffers.\ */}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DS3231\_MAX\_BLOCK\_WRITE\ \ \ (8)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ DS3231\_MAX\_BLOCK\_READ\ \ \ \ (7)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ DS3231\_ALARM1\_BUF\_SIZE\ \ \ (4)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ DS3231\_ALARM2\_BUF\_SIZE\ \ \ (3)}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ DS3231\_TEMP\_BUF\_SIZE\ \ \ \ \ (2)}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Direcciones\ de\ Registros\ del\ DS3231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_SECONDS\ \ \ \ \ \ \ (0x00)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_MINUTES\ \ \ \ \ \ \ (0x01)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_HOURS\ \ \ \ \ \ \ \ \ (0x02)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_DAY\ \ \ \ \ \ \ \ \ \ \ (0x03)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_DATE\ \ \ \ \ \ \ \ \ \ (0x04)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_MONTH\ \ \ \ \ \ \ \ \ (0x05)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_YEAR\ \ \ \ \ \ \ \ \ \ (0x06)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_ALARM\_1\ \ \ \ \ \ \ (0x07)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_ALARM\_2\ \ \ \ \ \ \ (0x0B)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_CONTROL\ \ \ \ \ \ \ (0x0E)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_STATUS\ \ \ \ \ \ \ \ (0x0F)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_AGING\ \ \ \ \ \ \ \ \ (0x10)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_TEMP\_MSB\ \ \ \ \ \ (0x11)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ DS3231\_REG\_TEMP\_LSB\ \ \ \ \ \ (0x12)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ Bit\ Map\ del\ Registro\ de\ Control\ (0x0E)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00050\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_EOSC\ \ \ \ \ \ \ \ \ (1\ <<\ 7)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_BBSQW\ \ \ \ \ \ \ \ (1\ <<\ 6)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_CONV\ \ \ \ \ \ \ \ \ (1\ <<\ 5)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_RS2\ \ \ \ \ \ \ \ \ \ (1\ <<\ 4)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_RS1\ \ \ \ \ \ \ \ \ \ (1\ <<\ 3)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_INTCN\ \ \ \ \ \ \ \ (1\ <<\ 2)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_A2IE\ \ \ \ \ \ \ \ \ (1\ <<\ 1)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ DS3231\_CTRL\_A1IE\ \ \ \ \ \ \ \ \ (1\ <<\ 0)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ Frecuencia\ de\ la\ señal\ cuadrada\ */}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ DS3231\_SQW\_1HZ\ \ \ \ \ \ \ \ \ \ \ (0)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ DS3231\_SQW\_1024HZ\ \ \ \ \ \ \ \ (DS3231\_CTRL\_RS1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ DS3231\_SQW\_4096HZ\ \ \ \ \ \ \ \ (DS3231\_CTRL\_RS2)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ DS3231\_SQW\_8192HZ\ \ \ \ \ \ \ \ (DS3231\_CTRL\_RS2\ |\ DS3231\_CTRL\_RS1)\ \ \ \ \ \ \ \ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00067\ \textcolor{comment}{/*\ Bit\ Map\ del\ Registro\ de\ Estado\ (0x0F)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00068\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ DS3231\_STATUS\_OSF\ \ \ \ \ \ \ \ (1\ <<\ 7)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ DS3231\_STATUS\_EN32KHZ\ \ \ \ (1\ <<\ 3)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ DS3231\_STATUS\_BSY\ \ \ \ \ \ \ \ (1\ <<\ 2)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ DS3231\_STATUS\_A2F\ \ \ \ \ \ \ \ (1\ <<\ 1)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ DS3231\_STATUS\_A1F\ \ \ \ \ \ \ \ (1\ <<\ 0)\ \ }\textcolor{preprocessor}{}}
+\DoxyCodeLine{00074\ \ \textcolor{comment}{//\ end\ of\ group\ DS3231\_Registers}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DS3231\_REGISTERS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

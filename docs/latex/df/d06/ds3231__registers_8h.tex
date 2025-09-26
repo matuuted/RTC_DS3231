@@ -1,0 +1,88 @@
+\doxysection{Referencia del archivo Devices/\+API/\+Inc/ds3231\+\_\+registers.h}
+\hypertarget{ds3231__registers_8h}{}\label{ds3231__registers_8h}\index{Devices/API/Inc/ds3231\_registers.h@{Devices/API/Inc/ds3231\_registers.h}}
+
+
+Definiciones de registros y mascaras para el RTC DS3231.  
+
+
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DS3231\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+WRITE}~(8)
+\item 
+\#define {\bfseries DS3231\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+READ}~(7)
+\item 
+\#define {\bfseries DS3231\+\_\+\+ALARM1\+\_\+\+BUF\+\_\+\+SIZE}~(4)
+\item 
+\#define {\bfseries DS3231\+\_\+\+ALARM2\+\_\+\+BUF\+\_\+\+SIZE}~(3)
+\item 
+\#define {\bfseries DS3231\+\_\+\+TEMP\+\_\+\+BUF\+\_\+\+SIZE}~(2)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gab752aeeb9f43f088ef3ea1e92cf0dd55}{DS3231\+\_\+\+REG\+\_\+\+SECONDS}}~(0x00)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga0beecd98fb52521b3df1fb020e10bde1}{DS3231\+\_\+\+REG\+\_\+\+MINUTES}}~(0x01)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gac54475e0a15745f77a8275a4ddd71574}{DS3231\+\_\+\+REG\+\_\+\+HOURS}}~(0x02)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga893212dc1791ad4b6d57351fed0df3bf}{DS3231\+\_\+\+REG\+\_\+\+DAY}}~(0x03)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga30d9731093cd092c212bc763183e5819}{DS3231\+\_\+\+REG\+\_\+\+DATE}}~(0x04)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaaa4a129d3a1b54e2ab4e77f43a6f4985}{DS3231\+\_\+\+REG\+\_\+\+MONTH}}~(0x05)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga109bb0d6f731ff9453434eb80ded18b3}{DS3231\+\_\+\+REG\+\_\+\+YEAR}}~(0x06)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gabd5973ef29f3ed421269321e6826b8ea}{DS3231\+\_\+\+REG\+\_\+\+ALARM\+\_\+1}}~(0x07)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga8b94a8907a685e2e45d3e47ce074f920}{DS3231\+\_\+\+REG\+\_\+\+ALARM\+\_\+2}}~(0x0B)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga14b27d8bc32c34f1eaecf569355c84d3}{DS3231\+\_\+\+REG\+\_\+\+CONTROL}}~(0x0E)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaeee46891f279544efa92a99e15e8d023}{DS3231\+\_\+\+REG\+\_\+\+STATUS}}~(0x0F)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga90dd14910a8b8464f78fc73e90cc12d4}{DS3231\+\_\+\+REG\+\_\+\+AGING}}~(0x10)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaa03c8831a5b1e11abc00e730c23ecc55}{DS3231\+\_\+\+REG\+\_\+\+TEMP\+\_\+\+MSB}}~(0x11)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga35ddcaf5258fc941f90f8428c2032fa1}{DS3231\+\_\+\+REG\+\_\+\+TEMP\+\_\+\+LSB}}~(0x12)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gacfc1677178811d53cd457c4880c54ccc}{DS3231\+\_\+\+CTRL\+\_\+\+EOSC}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gae1cc580bf1a5bfb3986e4d779ac6b038}{DS3231\+\_\+\+CTRL\+\_\+\+BBSQW}}~(1 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga85eb927c3762783eed85ceebb1c043ab}{DS3231\+\_\+\+CTRL\+\_\+\+CONV}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gad6d9343d99d0781547085e4738550a9b}{DS3231\+\_\+\+CTRL\+\_\+\+RS2}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga73c83c329cb1cb19a4d3041f5c96efb7}{DS3231\+\_\+\+CTRL\+\_\+\+RS1}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga52c8ae1dab4ea9e3228283fbd7067429}{DS3231\+\_\+\+CTRL\+\_\+\+INTCN}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaf410370b8fe4ae2230aff4f9677c80ef}{DS3231\+\_\+\+CTRL\+\_\+\+A2\+IE}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gacba36e31094c1ca15def397a8b3fa6c7}{DS3231\+\_\+\+CTRL\+\_\+\+A1\+IE}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga3206ae1245ccba978a0dac4a4208638b}{DS3231\+\_\+\+SQW\+\_\+1\+HZ}}~(0)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaf0228eee07bbbc860c9f3f06c7d9cdcb}{DS3231\+\_\+\+SQW\+\_\+1024\+HZ}}~(\mbox{\hyperlink{group___d_s3231__registers_ga73c83c329cb1cb19a4d3041f5c96efb7}{DS3231\+\_\+\+CTRL\+\_\+\+RS1}})
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga00cabcd354f810db79ecf60834dc8c2c}{DS3231\+\_\+\+SQW\+\_\+4096\+HZ}}~(\mbox{\hyperlink{group___d_s3231__registers_gad6d9343d99d0781547085e4738550a9b}{DS3231\+\_\+\+CTRL\+\_\+\+RS2}})
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga4a82df50f6641d9d68c1c40ad5b470ab}{DS3231\+\_\+\+SQW\+\_\+8192\+HZ}}~(\mbox{\hyperlink{group___d_s3231__registers_gad6d9343d99d0781547085e4738550a9b}{DS3231\+\_\+\+CTRL\+\_\+\+RS2}} \texorpdfstring{$\vert$}{|} \mbox{\hyperlink{group___d_s3231__registers_ga73c83c329cb1cb19a4d3041f5c96efb7}{DS3231\+\_\+\+CTRL\+\_\+\+RS1}})
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gaec9ab3a653255f7463dbe72a6804504f}{DS3231\+\_\+\+STATUS\+\_\+\+OSF}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga2e08dacadcd17f7907512049e349ae81}{DS3231\+\_\+\+STATUS\+\_\+\+EN32\+KHZ}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga7868258193d87aba193666874b4f13c9}{DS3231\+\_\+\+STATUS\+\_\+\+BSY}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_ga14a09d4f8831969934c2d8b6009fc92d}{DS3231\+\_\+\+STATUS\+\_\+\+A2F}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{group___d_s3231__registers_gabde8d1288680a6e75fe124e09a45d2c9}{DS3231\+\_\+\+STATUS\+\_\+\+A1F}}~(1 $<$$<$ 0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Definiciones de registros y mascaras para el RTC DS3231. 
+
+Este archivo contiene las direcciones de los registros y máscaras de bits usadas internamente por el driver DS3231. 

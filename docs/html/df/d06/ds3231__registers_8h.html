@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RTC_3231: Referencia del archivo Devices/API/Inc/ds3231_registers.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<script type="text/javascript" src="../../clipboard.js"></script>
+<script type="text/javascript" src="../../cookie.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">RTC_3231<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Driver I2C para RTC 3231 (Real-Time Clock)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a href="../../dir_036ba507fe550560010f008cfcb3a881.html">Devices</a></li><li class="navelem"><a href="../../dir_23a8101c60ecbb74df3f07ff5b4d8090.html">API</a></li><li class="navelem"><a href="../../dir_e208b9c755a6f02acb3241583d487db1.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo ds3231_registers.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definiciones de registros y mascaras para el RTC DS3231.  
+<a href="#details">Más...</a></p>
+
+<p><a href="../../df/d06/ds3231__registers_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ga662a0cc87473e7fc2bb073d0c0bba4c3" id="r_ga662a0cc87473e7fc2bb073d0c0bba4c3"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_MAX_BLOCK_WRITE</b>&#160;&#160;&#160;(8)</td></tr>
+<tr class="memitem:ga32e209fc50f54f66922baa5e1c77640e" id="r_ga32e209fc50f54f66922baa5e1c77640e"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_MAX_BLOCK_READ</b>&#160;&#160;&#160;(7)</td></tr>
+<tr class="memitem:ga0875db5d6a752526aa33ae75889af947" id="r_ga0875db5d6a752526aa33ae75889af947"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM1_BUF_SIZE</b>&#160;&#160;&#160;(4)</td></tr>
+<tr class="memitem:ga0f31500c8ada10dfce4bf5c34c183ddc" id="r_ga0f31500c8ada10dfce4bf5c34c183ddc"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_ALARM2_BUF_SIZE</b>&#160;&#160;&#160;(3)</td></tr>
+<tr class="memitem:ga1e531f984a8747fa363e2b720f00d12f" id="r_ga1e531f984a8747fa363e2b720f00d12f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DS3231_TEMP_BUF_SIZE</b>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memitem:gab752aeeb9f43f088ef3ea1e92cf0dd55" id="r_gab752aeeb9f43f088ef3ea1e92cf0dd55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gab752aeeb9f43f088ef3ea1e92cf0dd55">DS3231_REG_SECONDS</a>&#160;&#160;&#160;(0x00)</td></tr>
+<tr class="memitem:ga0beecd98fb52521b3df1fb020e10bde1" id="r_ga0beecd98fb52521b3df1fb020e10bde1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga0beecd98fb52521b3df1fb020e10bde1">DS3231_REG_MINUTES</a>&#160;&#160;&#160;(0x01)</td></tr>
+<tr class="memitem:gac54475e0a15745f77a8275a4ddd71574" id="r_gac54475e0a15745f77a8275a4ddd71574"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gac54475e0a15745f77a8275a4ddd71574">DS3231_REG_HOURS</a>&#160;&#160;&#160;(0x02)</td></tr>
+<tr class="memitem:ga893212dc1791ad4b6d57351fed0df3bf" id="r_ga893212dc1791ad4b6d57351fed0df3bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga893212dc1791ad4b6d57351fed0df3bf">DS3231_REG_DAY</a>&#160;&#160;&#160;(0x03)</td></tr>
+<tr class="memitem:ga30d9731093cd092c212bc763183e5819" id="r_ga30d9731093cd092c212bc763183e5819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga30d9731093cd092c212bc763183e5819">DS3231_REG_DATE</a>&#160;&#160;&#160;(0x04)</td></tr>
+<tr class="memitem:gaaa4a129d3a1b54e2ab4e77f43a6f4985" id="r_gaaa4a129d3a1b54e2ab4e77f43a6f4985"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaaa4a129d3a1b54e2ab4e77f43a6f4985">DS3231_REG_MONTH</a>&#160;&#160;&#160;(0x05)</td></tr>
+<tr class="memitem:ga109bb0d6f731ff9453434eb80ded18b3" id="r_ga109bb0d6f731ff9453434eb80ded18b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga109bb0d6f731ff9453434eb80ded18b3">DS3231_REG_YEAR</a>&#160;&#160;&#160;(0x06)</td></tr>
+<tr class="memitem:gabd5973ef29f3ed421269321e6826b8ea" id="r_gabd5973ef29f3ed421269321e6826b8ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gabd5973ef29f3ed421269321e6826b8ea">DS3231_REG_ALARM_1</a>&#160;&#160;&#160;(0x07)</td></tr>
+<tr class="memitem:ga8b94a8907a685e2e45d3e47ce074f920" id="r_ga8b94a8907a685e2e45d3e47ce074f920"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga8b94a8907a685e2e45d3e47ce074f920">DS3231_REG_ALARM_2</a>&#160;&#160;&#160;(0x0B)</td></tr>
+<tr class="memitem:ga14b27d8bc32c34f1eaecf569355c84d3" id="r_ga14b27d8bc32c34f1eaecf569355c84d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga14b27d8bc32c34f1eaecf569355c84d3">DS3231_REG_CONTROL</a>&#160;&#160;&#160;(0x0E)</td></tr>
+<tr class="memitem:gaeee46891f279544efa92a99e15e8d023" id="r_gaeee46891f279544efa92a99e15e8d023"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaeee46891f279544efa92a99e15e8d023">DS3231_REG_STATUS</a>&#160;&#160;&#160;(0x0F)</td></tr>
+<tr class="memitem:ga90dd14910a8b8464f78fc73e90cc12d4" id="r_ga90dd14910a8b8464f78fc73e90cc12d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga90dd14910a8b8464f78fc73e90cc12d4">DS3231_REG_AGING</a>&#160;&#160;&#160;(0x10)</td></tr>
+<tr class="memitem:gaa03c8831a5b1e11abc00e730c23ecc55" id="r_gaa03c8831a5b1e11abc00e730c23ecc55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaa03c8831a5b1e11abc00e730c23ecc55">DS3231_REG_TEMP_MSB</a>&#160;&#160;&#160;(0x11)</td></tr>
+<tr class="memitem:ga35ddcaf5258fc941f90f8428c2032fa1" id="r_ga35ddcaf5258fc941f90f8428c2032fa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga35ddcaf5258fc941f90f8428c2032fa1">DS3231_REG_TEMP_LSB</a>&#160;&#160;&#160;(0x12)</td></tr>
+<tr class="memitem:gacfc1677178811d53cd457c4880c54ccc" id="r_gacfc1677178811d53cd457c4880c54ccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gacfc1677178811d53cd457c4880c54ccc">DS3231_CTRL_EOSC</a>&#160;&#160;&#160;(1 &lt;&lt; 7)</td></tr>
+<tr class="memitem:gae1cc580bf1a5bfb3986e4d779ac6b038" id="r_gae1cc580bf1a5bfb3986e4d779ac6b038"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gae1cc580bf1a5bfb3986e4d779ac6b038">DS3231_CTRL_BBSQW</a>&#160;&#160;&#160;(1 &lt;&lt; 6)</td></tr>
+<tr class="memitem:ga85eb927c3762783eed85ceebb1c043ab" id="r_ga85eb927c3762783eed85ceebb1c043ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga85eb927c3762783eed85ceebb1c043ab">DS3231_CTRL_CONV</a>&#160;&#160;&#160;(1 &lt;&lt; 5)</td></tr>
+<tr class="memitem:gad6d9343d99d0781547085e4738550a9b" id="r_gad6d9343d99d0781547085e4738550a9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gad6d9343d99d0781547085e4738550a9b">DS3231_CTRL_RS2</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
+<tr class="memitem:ga73c83c329cb1cb19a4d3041f5c96efb7" id="r_ga73c83c329cb1cb19a4d3041f5c96efb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga73c83c329cb1cb19a4d3041f5c96efb7">DS3231_CTRL_RS1</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="memitem:ga52c8ae1dab4ea9e3228283fbd7067429" id="r_ga52c8ae1dab4ea9e3228283fbd7067429"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga52c8ae1dab4ea9e3228283fbd7067429">DS3231_CTRL_INTCN</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memitem:gaf410370b8fe4ae2230aff4f9677c80ef" id="r_gaf410370b8fe4ae2230aff4f9677c80ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaf410370b8fe4ae2230aff4f9677c80ef">DS3231_CTRL_A2IE</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="memitem:gacba36e31094c1ca15def397a8b3fa6c7" id="r_gacba36e31094c1ca15def397a8b3fa6c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gacba36e31094c1ca15def397a8b3fa6c7">DS3231_CTRL_A1IE</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="memitem:ga3206ae1245ccba978a0dac4a4208638b" id="r_ga3206ae1245ccba978a0dac4a4208638b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga3206ae1245ccba978a0dac4a4208638b">DS3231_SQW_1HZ</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memitem:gaf0228eee07bbbc860c9f3f06c7d9cdcb" id="r_gaf0228eee07bbbc860c9f3f06c7d9cdcb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaf0228eee07bbbc860c9f3f06c7d9cdcb">DS3231_SQW_1024HZ</a>&#160;&#160;&#160;(<a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga73c83c329cb1cb19a4d3041f5c96efb7">DS3231_CTRL_RS1</a>)</td></tr>
+<tr class="memitem:ga00cabcd354f810db79ecf60834dc8c2c" id="r_ga00cabcd354f810db79ecf60834dc8c2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga00cabcd354f810db79ecf60834dc8c2c">DS3231_SQW_4096HZ</a>&#160;&#160;&#160;(<a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gad6d9343d99d0781547085e4738550a9b">DS3231_CTRL_RS2</a>)</td></tr>
+<tr class="memitem:ga4a82df50f6641d9d68c1c40ad5b470ab" id="r_ga4a82df50f6641d9d68c1c40ad5b470ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga4a82df50f6641d9d68c1c40ad5b470ab">DS3231_SQW_8192HZ</a>&#160;&#160;&#160;(<a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gad6d9343d99d0781547085e4738550a9b">DS3231_CTRL_RS2</a> | <a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga73c83c329cb1cb19a4d3041f5c96efb7">DS3231_CTRL_RS1</a>)</td></tr>
+<tr class="memitem:gaec9ab3a653255f7463dbe72a6804504f" id="r_gaec9ab3a653255f7463dbe72a6804504f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gaec9ab3a653255f7463dbe72a6804504f">DS3231_STATUS_OSF</a>&#160;&#160;&#160;(1 &lt;&lt; 7)</td></tr>
+<tr class="memitem:ga2e08dacadcd17f7907512049e349ae81" id="r_ga2e08dacadcd17f7907512049e349ae81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga2e08dacadcd17f7907512049e349ae81">DS3231_STATUS_EN32KHZ</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="memitem:ga7868258193d87aba193666874b4f13c9" id="r_ga7868258193d87aba193666874b4f13c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga7868258193d87aba193666874b4f13c9">DS3231_STATUS_BSY</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memitem:ga14a09d4f8831969934c2d8b6009fc92d" id="r_ga14a09d4f8831969934c2d8b6009fc92d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#ga14a09d4f8831969934c2d8b6009fc92d">DS3231_STATUS_A2F</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="memitem:gabde8d1288680a6e75fe124e09a45d2c9" id="r_gabde8d1288680a6e75fe124e09a45d2c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dd7/group___d_s3231__registers.html#gabde8d1288680a6e75fe124e09a45d2c9">DS3231_STATUS_A1F</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Definiciones de registros y mascaras para el RTC DS3231. </p>
+<p>Este archivo contiene las direcciones de los registros y máscaras de bits usadas internamente por el driver DS3231. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
